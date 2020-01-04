@@ -8,6 +8,10 @@
     <link href="style.css" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/KiwiMI.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
   <div class="header" onclick="location.href='#quickStart';">
@@ -33,6 +37,7 @@
       <pre>
       <div id="copyCode" class="copyCode" onclick="copyOne();">Copy</div>
       <div id="inputOne" class="space">
+&lt;<span class="iRed">meta</span> <span class="iOrange">name</span>=<span class="iGreen">"viewport"</span> <span class="iOrange">content</span>=<span class="iGreen">"width=device-width</span>, <span class="iGreen">initial-scale=1.0</span>, <span class="iGreen">maximum-scale=1.0</span>, <span class="iGreen">minimum-scale=1.0</span>, <span class="iGreen">user-scalable=no</span>, <span class="iGreen">target-densityDpi=device-dpi"</span> /&gt;
 &lt;<span class="iRed">script</span> <span class="iOrange">type</span>=<span class="iGreen">"text/javascript"</span> <span class="iOrange">src</span>=<span class="iGreen">"</span><span class="iLightBlue">https://code.jquery.com/jquery-3.4.1.min.js</span><span class="iGreen">"</span>&gt;&lt;/<span class="iRed">script</span>&gt;
 &lt;<span class="iRed">script</span> <span class="iOrange">type</span>=<span class="iGreen">"text/javascript"</span> <span class="iOrange">src</span>=<span class="iGreen">"js/KiwiMI.js"</span>&gt;&lt;/<span class="iRed">script</span>&gt;
       </div>
@@ -213,6 +218,14 @@
     </pre>
     <h2>4. Needs to download files and copy them to the root of the site</h2>
     <a href="KiwiMI.zip" class="download" download>Download</a>
+    <h2>5. Add id="modalImg" and dataIndex="0" (then 1,2,... etc.) attribute to your img tag</h2>
+    <pre>
+      <div id="copyCode "class="copyCode" onclick="copyFour();">Copy</div>
+      <div id="inputFour" class="space">
+&lt;<span class="iRed">img</span> <span class="iBlue">id</span>=<span class="iGreen">"modalImg"</span> <span class="iOrange">dataIndex</span>=<span class="iGreen">"0"</span> <span class="iOrange">alt</span>=<span class="iGreen">"Photo by Lennon Cheng on Unsplash"</span> <span class="iOrange">src</span>=<span class="iGreen">"examples/01.jpg"</span>&gt;
+&lt;<span class="iRed">img</span> <span class="iBlue">id</span>=<span class="iGreen">"modalImg"</span> <span class="iOrange">dataIndex</span>=<span class="iGreen">"1"</span> <span class="iOrange">alt</span>=<span class="iGreen">"Photo by Amy Shamblen on Unsplash"</span> <span class="iOrange">src</span>=<span class="iGreen">"examples/02.jpg"</span>&gt;
+      </div>
+    </pre>
   </div>
 </div>
 <div id="info" class="paddingBottom">
@@ -220,7 +233,7 @@
       <h1>License and price.</h1>
       <p class="centered">KiwiMI is licensed under the terms of the MIT License.</p>
       <h1>About.</h1>
-      <p class="centered">This project made by Skvortsov Nikita</p>
+      <p class="centered">This project made by Skvortsov Nikita Dmitrievich</p>
       <a href="https://4x1.pw" class="poweredBy" target="_blank"></a>
   </div>
 </div>
@@ -259,6 +272,15 @@ function copyTwo() {
 
 function copyThree() {
   const copyText = document.getElementById("inputThree").textContent;
+  const textArea = document.createElement('textarea');
+  textArea.textContent = copyText;
+  document.body.append(textArea);
+  textArea.select();
+  document.execCommand("copy");
+}
+
+function copyFour() {
+  const copyText = document.getElementById("inputFour").textContent;
   const textArea = document.createElement('textarea');
   textArea.textContent = copyText;
   document.body.append(textArea);
