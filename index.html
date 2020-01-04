@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+    <title>Kiwi MI - Modal Images made by 4X1</title>
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/KiwiMI.js"></script>
+  </head>
+  <body>
+  <div class="header" onclick="location.href='#quickStart';">
+    <div class="wrapper">
+    <div class="headerBox">
+      <span class="headerText headerTextColor l"><span class="title">Kiwi MI.&nbsp;</span>I'm <span class="iRed">&nbsp;<3&nbsp;</span> Modal Images</span>
+      <span class="headerText headerTextColor r">Click on kiwi for a quick start.</span>
+    </div>
+  </div>
+  </div>
+  <div class="wrapper margimBottom">
+    <div class="imgBox">
+      <img id="modalImg" dataIndex="0" alt="Photo by Lennon Cheng on Unsplash" src="examples/01.jpg">
+      <img id="modalImg" dataIndex="1" alt="Photo by Amy Shamblen on Unsplash" src="examples/02.jpg">
+      <img id="modalImg" class="img2" dataIndex="2" alt="Photo by Zdeněk Macháček on Unsplash" src="examples/03.jpg">
+    </div>
+  </div>
+  <div id="quickStart" class="paddingBottom">
+    <div class="wrapper">
+      <h1>Kiwi MI. <span class="headerTextColor">Quick Start</span></h1>
+      <p>Just follow these steps, it's easy :)</p>
+      <h2>1. Paste it in the head of your site</h2>
+      <pre>
+      <div id="copyCode" class="copyCode" onclick="copyOne();">Copy</div>
+      <div id="inputOne" class="space">
+&lt;<span class="iRed">script</span> <span class="iOrange">type</span>=<span class="iGreen">"text/javascript"</span> <span class="iOrange">src</span>=<span class="iGreen">"</span><span class="iLightBlue">https://code.jquery.com/jquery-3.4.1.min.js</span><span class="iGreen">"</span>&gt;&lt;/<span class="iRed">script</span>&gt;
+&lt;<span class="iRed">script</span> <span class="iOrange">type</span>=<span class="iGreen">"text/javascript"</span> <span class="iOrange">src</span>=<span class="iGreen">"js/KiwiMI.js"</span>&gt;&lt;/<span class="iRed">script</span>&gt;
+      </div>
+      </pre>
+      <h2>2. Copy the html block to the end of the page, before closing the body tag</h2>
+      <pre>
+        <div id="copyCode "class="copyCode" onclick="copyTwo();">Copy</div>
+        <div id="inputTwo" class="space">
+&lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"closeModal"</span>>&lt;/<span class="iRed">span</span>&gt;
+&lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"previousImg"</span>>&lt;/<span class="iRed">span</span>&gt;
+&lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"nextImg"</span>>&lt;/<span class="iRed">span</span>&gt;
+&lt;<span class="iRed">div</span> <span class="iBlue">id</span>=<span class="iGreen">"modalWindow"</span>&gt;
+  &lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"topIndent"</span>&gt;&lt;/<span class="iRed">span</span>&gt;
+  &lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"leftIndent"</span>&gt;&lt;/<span class="iRed">span</span>&gt;
+    &lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"imgSpace"</span>&gt;
+      &lt;<span class="iRed">img</span> <span class="iBlue">id</span>=<span class="iGreen">"imgPlace"</span> <span class="iOrange">class</span>=<span class="iGreen">"notThis"</span> <span class="iOrange">unselectable</span>=<span class="iGreen">"on"</span>&gt;
+    &lt;/<span class="iRed">span</span>&gt;
+  &lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"rightIndent"</span>&gt;&lt;/<span class="iRed">span</span>&gt;
+  &lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"imgDescription"</span>&gt;Test description&lt;/<span class="iRed">span</span>&gt;
+  &lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"closingArea"</span> <span class="iOrange">style</span>=<span class="iGreen">"display: none;"</span>&gt;Pull down to close&lt;/<span class="iRed">span</span>&gt;
+  &lt;<span class="iRed">span</span> <span class="iBlue">id</span>=<span class="iGreen">"space"</span> <span class="iOrange">style</span>=<span class="iGreen">"display: none;"</span>&nbsp;&lt;/<span class="iRed">span</span>&gt;
+&lt;/<span class="iRed">div</span>&gt;
+        </div>
+      </pre>
+      <h2>3. Сopy this css and paste at the end of your style</h2>
+      <pre>
+        <div id="copyCode "class="copyCode" onclick="copyThree();">Copy</div>
+        <div id="inputThree" class="space">
+<span class="iBlue">#modalWindow</span> {
+  display: none;
+  height: <span class="iOrange">100%</span>;
+  width: <span class="iOrange">100%</span>;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: <span class="iOrange">0</span>;
+  top: <span class="iOrange">0</span>;
+  background-color: <span class="iLightBlue">rgba</span>(<span class="iOrange">45</span>,<span class="iOrange">44</span>,<span class="iOrange">50</span>,<span class="iOrange">0.98</span>);
+  scroll-snap-type: y proximity;
+  z-index: <span class="iOrange">997</span>;
+}
+
+<span class="iPurple">@supports</span> (<span class="iGrey">backdrop-filter</span>: none) {
+  <span class="iBlue">#modalWindow</span> {
+    <span class="iGrey">backdrop-filter</span>: <span class="iLightBlue">blur</span>(<span class="iOrange">10px</span>);
+  }
+}
+
+<span class="iBlue">#topIndent</span> {
+  display: block;
+  height: <span class="iOrange">80px</span>;
+  width: <span class="iOrange">100%</span>;
+}
+
+<span class="iBlue">#closeModal</span> {
+  display: none;
+  position: fixed;
+  height: <span class="iOrange">80px</span>;
+  width: <span class="iOrange">100%</span>;
+  top: <span class="iOrange">0</span>;
+  margin-left: <span class="iOrange">-4px</span>;
+  background-image: <span class="iLightBlue">url</span>(<span class="iGreen">'img/close.png'</span>);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+  opacity: <span class="iOrange">1</span>;
+  -webkit-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  -moz-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  -o-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  -ms-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  z-index: <span class="iOrange">998</span>;
+}
+
+<span class="iBlue">#closeModal</span><span class="iOrange">:hover</span> {
+  opacity: <span class="iOrange">0.5</span>;
+}
+
+<span class="iBlue">#leftIndent</span> {
+  display: inline-block;
+  height: <span class="iLightBlue">calc</span>((<span class="iLightBlue">var</span><span class="iRed">(--vh,</span> <span class="iOrange">1vh</span><span class="iRed">)</span> <span class="iPurple">*</span> <span class="iOrange">100</span>) - <span class="iOrange">160px</span>);
+  width: <span class="iOrange">80px</span>;
+}
+
+<span class="iBlue">#previousImg</span> {
+  display: none;
+  position: fixed;
+  height: <span class="iLightBlue">calc</span>((<span class="iLightBlue">var</span><span class="iRed">(--vh,</span> <span class="iOrange">1vh</span><span class="iRed">)</span> <span class="iPurple">*</span> <span class="iOrange">100</span>) - <span class="iOrange">160px</span>);
+  width: <span class="iOrange">80px</span>;
+  top: <span class="iOrange">80px</span>;
+  left: <span class="iOrange">0</span>;
+  background-image: <span class="iLightBlue">url</span>(<span class="iGreen">'img/leftarrow.png'</span>);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: <span class="iOrange">1</span>;
+  -webkit-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  -moz-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  -o-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  -ms-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  z-index: <span class="iOrange">998</span>;
+}
+
+<span class="iBlue">#previousImg</span>:hover {
+  opacity: <span class="iOrange">0.5</span>;
+}
+
+<span class="iBlue">#imgPlace</span> {
+  display: inline-table;
+  width: <span class="iLightBlue">calc</span>(<span class="iOrange">100vw - 160px</span>);
+  height: <span class="iLightBlue">calc</span>(<span class="iOrange">100vh - 160px</span>);
+  margin-left: <span class="iOrange">-4px</span>;
+}
+
+<span class="iBlue">#rightIndent</span> {
+  display: inline-block;
+  height: <span class="iLightBlue">calc</span>((<span class="iLightBlue">var</span><span class="iRed">(--vh,</span> <span class="iOrange">1vh</span><span class="iRed">)</span> <span class="iPurple">*</span> <span class="iOrange">100</span>) - <span class="iOrange">160px</span>);
+  width: <span class="iOrange">80px</span>;
+  margin-left: <span class="iOrange">-4px</span>;
+}
+
+<span class="iBlue">#nextImg</span> {
+  display: none;
+  position: fixed;
+  height: <span class="iLightBlue">calc</span>((<span class="iLightBlue">var</span><span class="iRed">(--vh,</span> <span class="iOrange">1vh</span><span class="iRed">)</span> <span class="iPurple">*</span> <span class="iOrange">100</span>) - <span class="iOrange">160px</span>);
+  width: <span class="iOrange">80px</span>;
+  top: <span class="iOrange">80px</span>;
+  right: <span class="iOrange">0</span>;
+  margin-left: <span class="iOrange">-4px</span>;
+  background-image: <span class="iLightBlue">url</span>(<span class="iGreen">'img/rightarrow.png'</span>);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: <span class="iOrange">1</span>;
+  -webkit-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  -moz-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  -o-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  -ms-transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  transition: <span class="iGrey">opacity</span> <span class="iOrange">0.2s</span> ease-in-out;
+  z-index: <span class="iOrange">998</span>;
+}
+
+<span class="iBlue">#nextImg</span><span class="iOrange">:hover</span> {
+  opacity: <span class="iOrange">0.5</span>;
+}
+
+<span class="iBlue">#imgDescription</span> {
+  display: block;
+  width: <span class="iOrange">100%</span>;
+  height: <span class="iOrange">200px</span>;
+  line-height: <span class="iOrange">200px</span>;
+  text-align: center;
+  font-family: <span class="iOrange">sans-serif</span>;
+  font-size: <span class="iOrange">1.2em</span>;
+  color: <span class="iOrange">#</span><span class="iLightBlue">fff</span>;
+  opacity: <span class="iOrange">.3</span>;
+  margin-top: <span class="iOrange">-4px</span>;
+}
+
+<span class="iBlue">#closingArea</span> {
+  width: <span class="iOrange">100%</span>;
+  height: <span class="iOrange">50px</span>;
+  line-height: <span class="iOrange">50px</span>;
+  text-align: center;
+  font-family: <span class="iOrange">sans-serif</span>;
+  font-size: <span class="iOrange">1.2em</span>;
+  color: <span class="iOrange">#</span><span class="iLightBlue">6f6e71</span>;
+  background: <span class="iLightBlue">linear-gradient</span>(<span class="iOrange">0deg</span>, <span class="iLightBlue">rgb</span>(<span class="iOrange">31</span>, <span class="iOrange">29</span>, <span class="iOrange">34</span>) <span class="iOrange">0%</span>, <span class="iLightBlue">rgb</span>(<span class="iOrange">31</span>, <span class="iOrange">29</span>, <span class="iOrange">34</span>) <span class="iOrange">1%</span>, <span class="iLightBlue">rgba</span>(<span class="iOrange">31</span>, <span class="iOrange">29</span>, <span class="iOrange">34</span>,<span class="iOrange">0</span>) <span class="iOrange">100%</span>);
+}
+
+<span class="iBlue">#space</span> {
+  width: <span class="iOrange">100%</span>;
+  height: <span class="iOrange">300px</span>;
+  background-color: <span class="iOrange">#</span><span class="iLightBlue">1f1e22</span>;
+}
+      </div>
+    </pre>
+    <h2>4. Needs to download files and copy them to the root of the site</h2>
+    <a href="KiwiMI.zip" class="download" download>Download</a>
+  </div>
+</div>
+<div id="info" class="paddingBottom">
+  <div class="wrapper">
+      <h1>License and price.</h1>
+      <p class="centered">KiwiMI is licensed under the terms of the MIT License.</p>
+      <h1>About.</h1>
+      <p class="centered">This project made by Skvortsov Nikita</p>
+      <a href="https://4x1.pw" class="poweredBy" target="_blank"></a>
+  </div>
+</div>
+<span id="closeModal"></span>
+<span id="previousImg"></span>
+<span id="nextImg"></span>
+<div id="modalWindow">
+  <span id="topIndent"></span>
+  <span id="leftIndent"></span>
+    <span id="imgSpace">
+      <img id="imgPlace" class="notThis" unselectable="on">
+    </span>
+  <span id="rightIndent"></span>
+  <span id="imgDescription">Test description</span>
+  <span id="closingArea" style="display: none;">Pull down to close</span>
+  <span id="space" style="display: none;">&nbsp;</span>
+</div>
+<script type="text/javascript">
+function copyOne() {
+  const copyText = document.getElementById("inputOne").textContent;
+  const textArea = document.createElement('textarea');
+  textArea.textContent = copyText;
+  document.body.append(textArea);
+  textArea.select();
+  document.execCommand("copy");
+}
+
+function copyTwo() {
+  const copyText = document.getElementById("inputTwo").textContent;
+  const textArea = document.createElement('textarea');
+  textArea.textContent = copyText;
+  document.body.append(textArea);
+  textArea.select();
+  document.execCommand("copy");
+}
+
+function copyThree() {
+  const copyText = document.getElementById("inputThree").textContent;
+  const textArea = document.createElement('textarea');
+  textArea.textContent = copyText;
+  document.body.append(textArea);
+  textArea.select();
+  document.execCommand("copy");
+}
+</script>
+  </body>
+</html>
