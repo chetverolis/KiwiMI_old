@@ -182,11 +182,17 @@ Just follow these steps, it's easy :)
 ```
 
 4. Needs to download files and copy them to the root of the site
-[Download](https://etozhenick.github.io/KiwiMI/KiwiMI.zip)
+<br>[Download](https://etozhenick.github.io/KiwiMI/KiwiMI.zip)
+
+5. Add id="modalImg" and dataIndex="0" (then 1,2,... etc.) attribute to your img tag
+```html
+<img id="modalImg" dataIndex="0" alt="Photo by Lennon Cheng on Unsplash" src="examples/01.jpg">
+<img id="modalImg" dataIndex="1" alt="Photo by Amy Shamblen on Unsplash" src="examples/02.jpg">
+```
 
 ## License and price.
 KiwiMI is licensed under the terms of the MIT License.
 
 ## About.
-This project made by Skvortsov Nikita
+This project made by Skvortsov Nikita Dmitrievich
 <br>[<img src="https://4x1.pw/assets/images/logo/logofullblack.svg" width="100">](https://4x1.pw/)
