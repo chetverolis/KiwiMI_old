@@ -8,10 +8,10 @@
     <link href="style.css" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/KiwiMI.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
   <div class="header" onclick="location.href='#quickStart';">
@@ -75,7 +75,7 @@
   overflow-x: hidden;
   left: <span class="iOrange">0</span>;
   top: <span class="iOrange">0</span>;
-  background-color: <span class="iLightBlue">rgba</span>(<span class="iOrange">45</span>,<span class="iOrange">44</span>,<span class="iOrange">50</span>,<span class="iOrange">0.98</span>);
+  background-color: <span class="iLightBlue">rgb</span>(<span class="iOrange">0</span>,<span class="iOrange">0</span>,<span class="iOrange">0</span>);
   scroll-snap-type: y proximity;
   z-index: <span class="iOrange">997</span>;
 }
@@ -146,6 +146,13 @@
   opacity: <span class="iOrange">0.5</span>;
 }
 
+<span class="iBlue">#imgSpace</span> {
+  width: <span class="iLightBlue">calc</span>(<span class="iOrange">100vw - 160px</span>);
+  height: <span class="iLightBlue">calc</span>(<span class="iOrange">100vh - 160px</span>);
+  display: inline-block;
+  margin-left: <span class="iOrange">-4px</span>;
+}
+
 <span class="iBlue">#imgPlace</span> {
   display: inline-table;
   width: <span class="iLightBlue">calc</span>(<span class="iOrange">100vw - 160px</span>);
@@ -193,8 +200,7 @@
   text-align: center;
   font-family: <span class="iOrange">sans-serif</span>;
   font-size: <span class="iOrange">1.2em</span>;
-  color: <span class="iOrange">#</span><span class="iLightBlue">fff</span>;
-  opacity: <span class="iOrange">.3</span>;
+  color: <span class="iOrange">#</span><span class="iLightBlue">4c4c4c</span>;
   margin-top: <span class="iOrange">-4px</span>;
 }
 
@@ -205,19 +211,19 @@
   text-align: center;
   font-family: <span class="iOrange">sans-serif</span>;
   font-size: <span class="iOrange">1.2em</span>;
-  color: <span class="iOrange">#</span><span class="iLightBlue">6f6e71</span>;
-  background: <span class="iLightBlue">linear-gradient</span>(<span class="iOrange">0deg</span>, <span class="iLightBlue">rgb</span>(<span class="iOrange">31</span>, <span class="iOrange">29</span>, <span class="iOrange">34</span>) <span class="iOrange">0%</span>, <span class="iLightBlue">rgb</span>(<span class="iOrange">31</span>, <span class="iOrange">29</span>, <span class="iOrange">34</span>) <span class="iOrange">1%</span>, <span class="iLightBlue">rgba</span>(<span class="iOrange">31</span>, <span class="iOrange">29</span>, <span class="iOrange">34</span>,<span class="iOrange">0</span>) <span class="iOrange">100%</span>);
+  color: <span class="iOrange">#</span><span class="iLightBlue">4c4c4c</span>;
+  background: <span class="iOrange">#</span><span class="iLightBlue">ffffff0d</span>;
 }
 
 <span class="iBlue">#space</span> {
   width: <span class="iOrange">100%</span>;
   height: <span class="iOrange">300px</span>;
-  background-color: <span class="iOrange">#</span><span class="iLightBlue">1f1e22</span>;
+  background-color: <span class="iOrange">#</span><span class="iLightBlue">ffffff0d</span>;
 }
       </div>
     </pre>
     <h2>4. Needs to download files and copy them to the root of the site</h2>
-    <a href="KiwiMI.zip" class="download" download>Download</a>
+    <a href="KiwiMI_beta.zip" class="download" download>Download</a>
     <h2>5. Add id="modalImg" and dataIndex="0" (then 1,2,... etc.) attribute to your img tag</h2>
     <pre>
       <div id="copyCode "class="copyCode" onclick="copyFour();">Copy</div>

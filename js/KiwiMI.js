@@ -24,8 +24,6 @@ $('document').ready(function(){
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
   document.addEventListener('touchstart', function(){}, {passive: false})
-  let pageEl = document.querySelector("body");
-  let modalEl = document.querySelector("#modalWindow");
   removeScroll();
 
   function removeScroll() {
@@ -64,33 +62,6 @@ $('document').ready(function(){
     }
   }
 
-  function preventScroll(e){
-  if (!isDescendant(modalEl, e.target)){
-    window.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
-    return false;
-  }
-
-  let modalTop = modalEl.scrollTop === 0;
-  let modalBottom = modalEl.scrollTop === (modalEl.scrollHeight - modalEl.clientHeight);
-
-  if (modalTop && e.deltaY < 0){
-    window.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
-  } else if (modalBottom && e.deltaY > 0){
-    window.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
-  }
-}
-
-function isDescendant(parent, child) {
-  let node = child.parentNode;
-    while (node != null) {
-      if (node == parent) {
-        return true;
-      }
-      node = node.parentNode;
-    }
-    return false;
-}
-
   $('#modalWindow').scroll(function(e) {
     imgPlaceWidth = imgPlace.clientWidth;
     imgPlaceHeight = imgPlace.clientHeight;
@@ -103,7 +74,6 @@ function isDescendant(parent, child) {
       setTimeout(function() {space.style.display = "block"}, 1100);
     }
     if ((height + modalWindowHeight - 280) >= imgSpaceHeight + 350) {
-      setTimeout(function() {$('#modalWindow').scrollTop(0,0);}, 200);
       setTimeout(function() {closeKiwiMI();}, 200);
     }
   });
@@ -112,8 +82,6 @@ function isDescendant(parent, child) {
     if($(event.target).closest('.notThis').length > 0) {
         return false;
     }
-    window.addEventListener("wheel", preventScroll);
-    window.addEventListener("touchmove", preventScroll);
     imgPlace.src = $(this).attr("src");
     dataIndex = $(this).attr("dataIndex");
     let alt = $(this).attr("alt");
@@ -143,11 +111,8 @@ function isDescendant(parent, child) {
     nextImg.onclick = nextKiwiMI;
   };
 
-  imgPlace.ondragstart = function() {
-    return false;
-  };
-
   function closeKiwiMI() {
+    $('#modalWindow').scrollTop(0,0);
     body.style.overflow = "auto";
     modalWindow.style.display = "none";
     closeModal.style.display = "none";
@@ -155,8 +120,6 @@ function isDescendant(parent, child) {
     nextImg.style.display = "none";
     closingArea.style.display = "none";
     space.style.display = "none";
-    window.removeEventListener("wheel", preventScroll);
-    window.removeEventListener("touchmove", preventScroll);
   };
 
   function previousKiwiMI() {
