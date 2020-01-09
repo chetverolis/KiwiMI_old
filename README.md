@@ -43,7 +43,7 @@ Just follow these steps, it's easy :)
   overflow-x: hidden;
   left: 0;
   top: 0;
-  background-color: rgba(45,44,50,0.98);
+  background-color: rgb(0,0,0);
   scroll-snap-type: y proximity;
   z-index: 997;
 }
@@ -114,6 +114,13 @@ Just follow these steps, it's easy :)
   opacity: 0.5;
 }
 
+#imgSpace {
+  width: calc(100vw - 160px);
+  height: calc(100vh - 160px);
+  display: inline-block;
+  margin-left: -4px;
+}
+
 #imgPlace {
   display: inline-table;
   width: calc(100vw - 160px);
@@ -161,8 +168,7 @@ Just follow these steps, it's easy :)
   text-align: center;
   font-family: sans-serif;
   font-size: 1.2em;
-  color: #fff;
-  opacity: .3;
+  color: #4c4c4c;
   margin-top: -4px;
 }
 
@@ -173,14 +179,14 @@ Just follow these steps, it's easy :)
   text-align: center;
   font-family: sans-serif;
   font-size: 1.2em;
-  color: #6f6e71;
-  background: linear-gradient(0deg, rgb(31, 29, 34) 0%, rgb(31, 29, 34) 1%, rgba(31, 29, 34,0) 100%);
+  color: #4c4c4c;
+  background: #ffffff0d;
 }
 
 #space {
   width: 100%;
   height: 300px;
-  background-color: #1f1e22;
+  background-color: #ffffff0d;
 }
 ```
 
