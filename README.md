@@ -117,7 +117,7 @@ Just follow these steps, it's easy :)
 #imgSpace {
   width: calc(100vw - 160px);
   height: calc(100vh - 160px);
-  display: inline-block;
+  display: inline-table;
   margin-left: -4px;
 }
 
