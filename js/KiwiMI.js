@@ -48,12 +48,14 @@ $('document').ready(function(){
   imgPlaceHeight = imgPlace.clientHeight;
   leftIndentHeight = leftIndent.clientHeight;
     if (imgPlaceHeight < leftIndentHeight) {
+      imgSpace.style.display = "inline-block";
       imgPlace.style.width = "100%";
       imgPlace.style.position = "absolute";
       imgPlace.style.top = "50%";
       imgPlace.style.left = "50%";
       imgPlace.style.transform = "translate(-50%, -50%)";
     } else {
+      imgSpace.style.display = "inline-table";
       imgPlace.style.width = null;
       imgPlace.style.position = null;
       imgPlace.style.top = null;
