@@ -2,7 +2,7 @@
 I'm <3 Modal Images
 
 ## Live version
-[Test page](https://etozhenick.github.io/KiwiMI/)
+[Test page](https://fourxone.github.io/KiwiMI/)
 
 ## Quick Start
 Just follow these steps, it's easy :)
@@ -191,7 +191,7 @@ Just follow these steps, it's easy :)
 ```
 
 4. Needs to download files and copy them to the root of the site
-<br>[Download](https://etozhenick.github.io/KiwiMI/KiwiMI_beta.zip)
+<br>[Download](https://fourxone.github.io/KiwiMI/KiwiMI_beta.zip)
 
 5. Add id="modalImg" and dataIndex="0" (then 1,2,... etc.) attribute to your img tag
 ```html
