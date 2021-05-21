@@ -2,7 +2,7 @@
 I'm <3 Modal Images
 
 ## Live version
-[Test page](https://fourxone.github.io/KiwiMI/)
+[Test page](https://chetverolis.github.io/KiwiMI_old/)
 
 ## Quick Start
 Just follow these steps, it's easy :)
@@ -204,4 +204,3 @@ KiwiMI is licensed under the terms of the MIT License.
 
 ## About.
 This project made by Skvortsov Nikita Dmitrievich
-<br>[<img src="https://4x1.pw/assets/images/logo/logofullblack.svg" width="100">](https://4x1.pw/)
